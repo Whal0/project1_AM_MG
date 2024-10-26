@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="title">Towarzystwo Radiowe Zorzy Polarnej</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="galeria.html">Galeria</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title">Kontakt</div>
+        <div class="shifted-box", id="contact-div">
+            <form id="contactForm">
+                <div class="contact-field">
+                    <label for="email">E-Mail:</label>
+                    <input type="text" id="email" placeholder="Wprowadź swój email" required>
+                </div>
+            
+                <div class="contact-field">
+                    <label for="subject">Temat wiadomości:</label>
+                    <select id="subject" required>
+                        <option value="pytanie">Pytanie</option>
+                        <option value="opinia">Opinia</option>
+                        <option value="inne">Inne</option>
+                    </select>
+                </div>
+            
+                <div class="contact-field">
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" placeholder="Wpisz swoją wiadomość"></textarea>
+                </div>
+            
+                <div class="contact-field">
+                    <button type="submit">Wyślij</button>
+                </div>
+            </form>
+                
+        </div>
+    </main>
+
+    <footer>
+        <div class="named">Maciej Grydyk</div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
