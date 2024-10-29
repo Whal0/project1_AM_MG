@@ -18,32 +18,40 @@
 
     <main>
         <div class="title">Kontakt</div>
-        <div class="shifted-box", id="contact-div">
-            <form id="contactForm">
-                <div class="contact-field">
-                    <label for="email">E-Mail:</label>
-                    <input type="text" id="email" placeholder="Wprowadź swój email" required>
-                </div>
+        
+
+        <div class="contact-container">
+            <div class="shifted-box", id="contact-div" style="max-width: fit-content; margin-left: auto; margin-right: auto;"> <!-- Center the div! -->
+                <form id="contactForm">
+                    <div class="contact-field">
+                        <label for="email">E-Mail<span style="color:red">*</span></label>
+                        <input type="text" id="email" placeholder="Wprowadź swój email" required>
+                    </div>
             
-                <div class="contact-field">
-                    <label for="subject">Temat wiadomości:</label>
-                    <select id="subject" required>
-                        <option value="pytanie">Pytanie</option>
-                        <option value="opinia">Opinia</option>
-                        <option value="inne">Inne</option>
-                    </select>
-                </div>
+                    <div class="contact-field">
+                        <label for="subject">Temat wiadomości</label>
+                        <select id="subject" required>
+                            <option value="pytanie">Pytanie</option>
+                            <option value="opinia">Opinia</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+                    <div class="contact-field">
+                        <label for="message">Treść wiadomości</label>
+                        <textarea id="message" placeholder="Wpisz swoją wiadomość"></textarea>
+                    </div>
             
-                <div class="contact-field">
-                    <label for="message">Wiadomość:</label>
-                    <textarea id="message" placeholder="Wpisz swoją wiadomość"></textarea>
-                </div>
+                    <div class="contact-field">
+                        <button type="submit" class="btn">Wyślij</button>
+                    </div>
             
-                <div class="contact-field">
-                    <button type="submit">Wyślij</button>
-                </div>
-            </form>
-                
+                </form>
+            
+            </div>
+            <div class="clock-face">
+                <div id="clock" class="btn"></div>
+                <button onclick="toggleClock()" class="btn" id="clock-btn">Pokaż/Ukryj Zegar</button>
+            </div>
         </div>
     </main>
 

@@ -1,7 +1,7 @@
 /* Typeface */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lora:ital,wght@0,400..700;1,400..700&family=Oxanium:wght@200..800&family=Saira+Stencil+One&display=swap');
 
-
+/* Ogólne i o nas */
 html{
     min-height: 100%;
     position:relative;
@@ -34,6 +34,7 @@ header {
 }
 
 .title{
+    font-family: "Saira Stencil One", sans-serif;
     font-weight:900;
     font-size:xx-large;
     margin: 0.5em 0 0.75em 0;
@@ -42,6 +43,7 @@ header {
     margin-right: auto;
 
 }
+
 footer {
     background-color: rgba(2,237,171,1);
     color: #8000FF;
@@ -56,10 +58,10 @@ footer {
 }
 
 nav a {
-    color: #8000FF;
+    color:  #a161e0;
     margin: 0 15px;
     text-decoration:wavy;
-    font-weight: 800;
+    font-weight:900;
     font-size: large;
 }
 
@@ -67,9 +69,24 @@ main {
     padding: 20px;
 }
 
-.container{
+.main-container{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1800px;
+    margin: 20px;
+}
+
+article{
+    flex: 1;
+    margin-right: 20px;
+}
+
+figure{
+    display: flex;
+    margin-top: 6%;
+    justify-content:space-around;
+    align-items: flex-start;
 }
 
 .named{
@@ -79,21 +96,26 @@ main {
     padding: 20px;
     display: inline-block;
     margin-top: 1.5rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 .shifted-box {
     position: relative;
-    background-color: #0b0719; 
+    background-color: #010b13; 
     color: #F0F8FF; 
     padding: 20px;
+    margin: 20px;
     display: inline-block;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    /* filter: drop-shadow(#F0F8FF 15px 12px); To robi praktycznie co cały css poniżej, ale nie można dać box shadow na box z przodu oraz dowiedziałem się o tym za późno */
 }
 
 .shifted-box::after {
     content: '';
     position: absolute;
-    top: 4px;
-    left: 6px;
+    top: 15px;
+    left: 12px;
     width: 100%;
     height: 100%;
     background-color: #F0F8FF; 
@@ -106,18 +128,18 @@ main {
 /* Galerii styling */
 .gallery {
     display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
+    flex-direction: row;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
     gap: 10px;
-    margin-bottom: 1em;
+    margin-bottom: 1vh;
 }
 
 .gallery img {
-    width: calc(33.333% - 10px);
+    width: calc(32% - 10px);
     height: auto;
+    padding: 1vh;
 }
 
 /* Responsywność */
@@ -127,15 +149,38 @@ main {
     }
 
     video {
-        width: 100%; 
+        width: auto;
     }
 }
 
+.video-container{
+    margin-top: 5vh;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+.video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
 /* Contact styling */
-#contact-div{
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+
+
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-field{
+padding: 10px;
+margin-bottom: 6px;
 }
 form {
     display: flex;
@@ -145,8 +190,9 @@ form {
     margin-bottom: 15px; 
 }
 
+
 label {
-    margin-bottom: 5px; 
+    padding: 5px;
     font-weight: bold; 
 }
 
@@ -169,16 +215,32 @@ select {
     background-color: #f1f1f1;
   }
 
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #0b0719;
-    border: none;
+.btn {
+    font-family: "Oxanium", sans-serif;
+    font-size: 2em; 
+    font-weight: bold;
+    background-color: black;
     color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
   }
 
-button:hover {
-    background-color: #0f0533; 
+.btn:hover {
+    font-family: "Oxanium", sans-serif;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.clock-face{
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 0 auto; /* Center the clock face within its container */
+    gap: 2vh;
+    height: 300px;
 }
